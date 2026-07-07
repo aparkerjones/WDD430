@@ -1,0 +1,149 @@
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 20px;
+}
+
+.todo-card {
+  width: min(100%, 640px);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(14px);
+}
+
+.eyebrow {
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.78rem;
+  color: #b45309;
+}
+
+.intro {
+  margin-bottom: 24px;
+}
+
+.new-item-form {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.form-row {
+  display: grid;
+  gap: 8px;
+}
+
+.form-row label,
+.list-title {
+  color: #9a3412;
+}
+
+.form-row input,
+.btn {
+  border: 0;
+  border-radius: 14px;
+  font: inherit;
+}
+
+.form-row input {
+  padding: 14px 16px;
+  background: #fff7ed;
+  color: #431407;
+}
+
+.form-row input:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid rgba(245, 158, 11, 0.35);
+  outline-offset: 2px;
+}
+
+.btn {
+  cursor: pointer;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.btn {
+  padding: 14px 18px;
+  background: linear-gradient(135deg, #ea580c, #f59e0b);
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(234, 88, 12, 0.24);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.list-title {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: #fffbeb;
+}
+
+.list li label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #1f2937;
+  flex: 1;
+}
+
+.list li input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  accent-color: #ea580c;
+}
+
+.list li:has(input:checked) label {
+  color: #9a3412;
+  text-decoration: line-through;
+}
+
+.btn-danger {
+  padding: 10px 14px;
+  background: #fff;
+  color: #9a3412;
+  box-shadow: none;
+}
+
+.empty-state {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(255, 247, 237, 0.75);
+  color: #9a3412;
+}
+
+@media (max-width: 640px) {
+  .todo-card {
+    padding: 24px 18px;
+  }
+
+  .list li {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

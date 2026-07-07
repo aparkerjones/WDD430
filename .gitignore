@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+
+# Common nested project outputs
+**/node_modules/
+**/dist/
+**/.vite/
