@@ -10,7 +10,7 @@ import { signIn } from '@/auth';
 
 const sql = postgres(
   (process.env.database_POSTGRES_URL ?? process.env.POSTGRES_URL)!,
-  { ssl: 'require' },
+  { ssl: 'require', prepare: false },
 );
 
 const FormSchema = z.object({

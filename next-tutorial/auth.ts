@@ -8,7 +8,7 @@ import type { User } from '@/app/lib/definitions';
 
 const sql = postgres(
   (process.env.database_POSTGRES_URL ?? process.env.POSTGRES_URL)!,
-  { ssl: 'require' },
+  { ssl: 'require', prepare: false },
 );
 
 async function getUser(email: string): Promise<User | undefined> {
