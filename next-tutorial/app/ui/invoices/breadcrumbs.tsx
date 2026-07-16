@@ -1,4 +1,4 @@
-import { clsx } from 'clsx';
+import clsx from 'clsx';
 import Link from 'next/link';
 import { lusitana } from '@/app/ui/fonts';
 
